@@ -1,10 +1,10 @@
 {
     "name": "Scratchpad",
-    "details": "https://github.com/i-anunay/sublime_scratchpad",
+    "details": "https://github.com/james2doyle/sublime_scratchpad",
     "releases": [
         {
             "sublime_text": "*",
-            "details": "https://github.com/i-anunay/sublime_scratchpad/tags"
+            "details": "https://github.com/james2doyle/sublime_scratchpad/tags"
         }
     ]
 }

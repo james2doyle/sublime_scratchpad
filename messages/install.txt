@@ -1,12 +1,12 @@
+--------------------------------------------------------------------------------------------
 
-    _____                _       _                     _
-   /  ___|              | |     | |                   | |
-   \ `--.  ___ _ __ __ _| |_ ___| |__  _ __   __ _  __| |
-    `--. \/ __| '__/ _` | __/ __| '_ \| '_ \ / _` |/ _` |
-   /\__/ / (__| | | (_| | || (__| | | | |_) | (_| | (_| |
-   \____/ \___|_|  \__,_|\__\___|_| |_| .__/ \__,_|\__,_|
-                                      | |
-                                      |_|
+     ______   ______   ______   ______   ______  ______   __  __   ______  ______   _____
+    /\  ___\ /\  ___\ /\  == \ /\  __ \ /\__  _\/\  ___\ /\ \_\ \ /\  == \/\  __ \ /\  __-.
+    \ \___  \\ \ \____\ \  __< \ \  __ \\/_/\ \/\ \ \____\ \  __ \\ \  _-/\ \  __ \\ \ \/\ \
+     \/\_____\\ \_____\\ \_\ \_\\ \_\ \_\  \ \_\ \ \_____\\ \_\ \_\\ \_\   \ \_\ \_\\ \____-
+      \/_____/ \/_____/ \/_/ /_/ \/_/\/_/   \/_/  \/_____/ \/_/\/_/ \/_/    \/_/\/_/ \/____/
+
+--------------------------------------------------------------------------------------------
 
 
 Easy to use Note taking tool for Sublime Text.
@@ -14,16 +14,28 @@ Easy to use Note taking tool for Sublime Text.
 Motivation
 ===========
 
-Sublime text is a great text editor and it can be used to write down your important notes, todo lists and random musings while you code :)
+Sublime Text is a great text editor and it can be used to write down your important notes, todo lists and random musings while you code :)
 
-I keep finding myself creating a new file every time using 'Ctrl+n' to write down something. Saving and managing these files is a pain.
+I keep finding myself creating a new file every time using `Ctrl+n` to write down something. Saving and managing these files is a pain.
+
+#### Settings
+
+You can change the path of where the file is saved. I like using a path to my Dropbox. By default it is in the package path for the plugin.
+
+```json
+{
+    // default path is the packages path
+    "file_path": null
+    // "file_path": "/Users/CoolBro/Library/CloudStorage/Dropbox/scratchpad.md"
+}
+```
 
 Solution
 ========
 
-This plugin maintains a single scratchpad file which you can open using 'Ctrl+alt+n' to view the contents of the file.
+This plugin maintains a single scratchpad file which you can open using `Ctrl+alt+n` to view the contents of the file.
 
-Hitting 'Ctrl+Space' will open and add a time-stamp at the end of the file where you can start typing your stuff.
+Hitting `Ctrl+Space` will open and add a time-stamp at the end of the file where you can start typing your stuff.
 
 ex:
 
@@ -31,6 +43,6 @@ Sun Sep 28 11:34:58 2014 :
 ========================
 " You can start typing from here "
 
-You can also type "Scratch Pad" in command pannel(ctrl+shift+p) to edit the scratchpad file
+You can also type "Scratch Pad" in command pannel (`Ctrl+shift+p`) to edit the scratchpad file
 
 This will help you stay organized with all your notes, as it will allow you to easily search your file contents. The time-stamp is a very useful feature to organize your notes.

@@ -1,7 +1,9 @@
 from sublime_plugin import WindowCommand
-from sublime import packages_path, ENCODED_POSITION
+from sublime import packages_path, load_settings, ENCODED_POSITION
 from time import strftime
 from os.path import isfile
+
+SETTINGS_FILENAME = 'Scratchpad.sublime-settings'
 
 headerText = """
 --------------------------------------------------------------------------------------------
@@ -20,14 +22,20 @@ headerText = """
 
 class OpenScratchpadCommand(WindowCommand):
     def run(self):
-        scratchpadFile = packages_path()[:-8] + "scratchpad.md"
+        settings = load_settings(SETTINGS_FILENAME)
+        scratchpadFile = settings.get('file_path')
+        if not scratchpadFile:
+            scratchpadFile = packages_path()[:-8] + "scratchpad.md"
         checkAndFillEmpty(scratchpadFile)
         self.window.open_file(scratchpadFile)
 
 
 class ScratchpadCommand(WindowCommand):
     def run(self):
-        scratchpadFile = packages_path()[:-8] + "scratchpad.md"
+        settings = load_settings(SETTINGS_FILENAME)
+        scratchpadFile = settings.get('file_path')
+        if not scratchpadFile:
+            scratchpadFile = packages_path()[:-8] + "scratchpad.md"
         global headerText
         checkAndFillEmpty(scratchpadFile)
         count = putTimeStamp(scratchpadFile)
