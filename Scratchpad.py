@@ -56,17 +56,17 @@ def expandFilePath():
 def checkAndFillEmpty(scratchpad_file):
     global headerText
     if not isfile(scratchpad_file):
-        with open(scratchpad_file, "a") as scratch_file:
+        with open(scratchpad_file, mode="a", encoding="utf-8") as scratch_file:
             scratch_file.write(headerText)
 
 
 def putTimeStamp(scratchpad_file):
     timeStamp = "\n\n# " + strftime("%c") + "\n\n"
 
-    with open(scratchpad_file, "a") as scratch_file:
+    with open(scratchpad_file, mode="a", encoding="utf-8") as scratch_file:
         scratch_file.write(timeStamp)
 
-    with open(scratchpad_file) as scratch_file:
+    with open(scratchpad_file, encoding="utf-8") as scratch_file:
         count = sum(1 for line in scratch_file)
 
     return count
